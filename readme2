@@ -1,0 +1,20 @@
+What it basically does:
+
+Uses Python’s glob library to automatically find the correct CSV files (like Installed Programs, USB Device Attached, Run Programs, etc.)
+I don’t manually look for filenames,the library does that whole process
+
+Uses the csv library to read each CSV and turn every row into a dictionary.
+This means I don’t manually parse any data, the library handles the whole reading process.
+
+
+What the script extracts:
+
+Installed applications (first 10 entries)
+
+User accounts, by detecting the login name column automatically
+
+Registry hives (checks if SAM, SOFTWARE, and SYSTEM files exist in the folder)
+
+USB history from Autopsy’s USB CSV export
+
+Command/ Running Programs history (first 10 entries)
